@@ -23,6 +23,9 @@ import com.marshalchen.common.demoofui.R;
 import com.marshalchen.common.demoofui.showcaseview.animations.AnimationSampleActivity;
 
 
+/**
+ * TODO Learn yindaoye
+ */
 public class ShowCaseSampleActivity extends Activity implements View.OnClickListener,
         OnShowcaseEventListener, AdapterView.OnItemClickListener {
 

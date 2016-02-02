@@ -19,7 +19,9 @@ import com.marshalchen.common.demoofui.R;
 
 import java.util.ArrayList;
 
-
+/**
+ * TODO Learn BLUR
+ */
 public class BlurNavigationDrawerActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 

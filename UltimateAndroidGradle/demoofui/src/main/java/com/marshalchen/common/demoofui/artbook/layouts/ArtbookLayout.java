@@ -180,7 +180,7 @@ public class ArtbookLayout extends FreeFlowLayoutBase implements FreeFlowLayout 
 
 	@Override
 	public void setLayoutParams(FreeFlowLayoutParams params) {
-		// TODO Auto-generated method stub
+		//
 		
 	}
 

@@ -97,6 +97,7 @@ public class AndroidViewHoverActivity extends ActionBarActivity {
 
         mSampleLayout4.addChildAppearAnimator(hover4, R.id.content, Techniques.BounceIn);
         mSampleLayout4.addChildDisappearAnimator(hover4, R.id.content, Techniques.FadeOutUp);
+        mSampleLayout4.setBlurDuration(10000);
 
 
         hover4.findViewById(R.id.cat).setOnClickListener(new View.OnClickListener() {

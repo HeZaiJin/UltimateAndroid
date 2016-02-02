@@ -2,12 +2,14 @@ package com.marshalchen.common.demoofui.sampleModules;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
 
 import com.marshalchen.common.demoofui.R;
 import com.marshalchen.common.uimodule.discreteseekbar.DiscreteSeekBar;
 
 
+/**
+ * TODO Learn 带标签的seekbar
+ */
 public class DiscreteSeekBarActivity extends Activity {
 
     @Override

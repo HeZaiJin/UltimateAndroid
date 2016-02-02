@@ -1,8 +1,5 @@
 package com.marshalchen.common.demoofui.sampleModules;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -17,15 +14,86 @@ import android.widget.BaseAdapter;
 import android.widget.Gallery;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.marshalchen.common.demoofui.R;
+import com.marshalchen.common.uimodule.ImageFilter.AutoAdjustFilter;
+import com.marshalchen.common.uimodule.ImageFilter.BannerFilter;
+import com.marshalchen.common.uimodule.ImageFilter.BigBrotherFilter;
+import com.marshalchen.common.uimodule.ImageFilter.BlackWhiteFilter;
+import com.marshalchen.common.uimodule.ImageFilter.BlindFilter;
+import com.marshalchen.common.uimodule.ImageFilter.BlockPrintFilter;
+import com.marshalchen.common.uimodule.ImageFilter.BrickFilter;
+import com.marshalchen.common.uimodule.ImageFilter.BrightContrastFilter;
+import com.marshalchen.common.uimodule.ImageFilter.CleanGlassFilter;
+import com.marshalchen.common.uimodule.ImageFilter.ColorQuantizeFilter;
+import com.marshalchen.common.uimodule.ImageFilter.ColorToneFilter;
+import com.marshalchen.common.uimodule.ImageFilter.ComicFilter;
 import com.marshalchen.common.uimodule.ImageFilter.Distort.BulgeFilter;
 import com.marshalchen.common.uimodule.ImageFilter.Distort.RippleFilter;
 import com.marshalchen.common.uimodule.ImageFilter.Distort.TwistFilter;
 import com.marshalchen.common.uimodule.ImageFilter.Distort.WaveFilter;
+import com.marshalchen.common.uimodule.ImageFilter.EdgeFilter;
+import com.marshalchen.common.uimodule.ImageFilter.FeatherFilter;
+import com.marshalchen.common.uimodule.ImageFilter.FillPatternFilter;
+import com.marshalchen.common.uimodule.ImageFilter.FilmFilter;
+import com.marshalchen.common.uimodule.ImageFilter.FocusFilter;
+import com.marshalchen.common.uimodule.ImageFilter.GammaFilter;
+import com.marshalchen.common.uimodule.ImageFilter.GaussianBlurFilter;
+import com.marshalchen.common.uimodule.ImageFilter.Gradient;
+import com.marshalchen.common.uimodule.ImageFilter.HslModifyFilter;
 import com.marshalchen.common.uimodule.ImageFilter.IImageFilter;
+import com.marshalchen.common.uimodule.ImageFilter.IllusionFilter;
 import com.marshalchen.common.uimodule.ImageFilter.Image;
-import com.marshalchen.common.uimodule.ImageFilter.*;
-import com.marshalchen.common.uimodule.ImageFilter.Textures.*;
+import com.marshalchen.common.uimodule.ImageFilter.InvertFilter;
+import com.marshalchen.common.uimodule.ImageFilter.LensFlareFilter;
+import com.marshalchen.common.uimodule.ImageFilter.LightFilter;
+import com.marshalchen.common.uimodule.ImageFilter.LomoFilter;
+import com.marshalchen.common.uimodule.ImageFilter.MirrorFilter;
+import com.marshalchen.common.uimodule.ImageFilter.MistFilter;
+import com.marshalchen.common.uimodule.ImageFilter.MonitorFilter;
+import com.marshalchen.common.uimodule.ImageFilter.MosaicFilter;
+import com.marshalchen.common.uimodule.ImageFilter.NeonFilter;
+import com.marshalchen.common.uimodule.ImageFilter.NightVisionFilter;
+import com.marshalchen.common.uimodule.ImageFilter.NoiseFilter;
+import com.marshalchen.common.uimodule.ImageFilter.OilPaintFilter;
+import com.marshalchen.common.uimodule.ImageFilter.OldPhotoFilter;
+import com.marshalchen.common.uimodule.ImageFilter.PaintBorderFilter;
+import com.marshalchen.common.uimodule.ImageFilter.PixelateFilter;
+import com.marshalchen.common.uimodule.ImageFilter.PosterizeFilter;
+import com.marshalchen.common.uimodule.ImageFilter.RadialDistortionFilter;
+import com.marshalchen.common.uimodule.ImageFilter.RainBowFilter;
+import com.marshalchen.common.uimodule.ImageFilter.RaiseFrameFilter;
+import com.marshalchen.common.uimodule.ImageFilter.RectMatrixFilter;
+import com.marshalchen.common.uimodule.ImageFilter.ReflectionFilter;
+import com.marshalchen.common.uimodule.ImageFilter.ReliefFilter;
+import com.marshalchen.common.uimodule.ImageFilter.SaturationModifyFilter;
+import com.marshalchen.common.uimodule.ImageFilter.SceneFilter;
+import com.marshalchen.common.uimodule.ImageFilter.SepiaFilter;
+import com.marshalchen.common.uimodule.ImageFilter.SharpFilter;
+import com.marshalchen.common.uimodule.ImageFilter.ShiftFilter;
+import com.marshalchen.common.uimodule.ImageFilter.SmashColorFilter;
+import com.marshalchen.common.uimodule.ImageFilter.SoftGlowFilter;
+import com.marshalchen.common.uimodule.ImageFilter.SupernovaFilter;
+import com.marshalchen.common.uimodule.ImageFilter.Textures.CloudsTexture;
+import com.marshalchen.common.uimodule.ImageFilter.Textures.LabyrinthTexture;
+import com.marshalchen.common.uimodule.ImageFilter.Textures.MarbleTexture;
+import com.marshalchen.common.uimodule.ImageFilter.Textures.TextileTexture;
+import com.marshalchen.common.uimodule.ImageFilter.Textures.TexturerFilter;
+import com.marshalchen.common.uimodule.ImageFilter.Textures.WoodTexture;
+import com.marshalchen.common.uimodule.ImageFilter.ThreeDGridFilter;
+import com.marshalchen.common.uimodule.ImageFilter.ThresholdFilter;
+import com.marshalchen.common.uimodule.ImageFilter.TileReflectionFilter;
+import com.marshalchen.common.uimodule.ImageFilter.TintFilter;
+import com.marshalchen.common.uimodule.ImageFilter.VideoFilter;
+import com.marshalchen.common.uimodule.ImageFilter.VignetteFilter;
+import com.marshalchen.common.uimodule.ImageFilter.VintageFilter;
+import com.marshalchen.common.uimodule.ImageFilter.WaterWaveFilter;
+import com.marshalchen.common.uimodule.ImageFilter.XRadiationFilter;
+import com.marshalchen.common.uimodule.ImageFilter.YCBCrLinearFilter;
+import com.marshalchen.common.uimodule.ImageFilter.ZoomBlurFilter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ImageFilterActivity extends Activity {
 
@@ -74,7 +142,7 @@ public class ImageFilterActivity extends Activity {
 
 		@Override
 		protected void onPreExecute() {
-			// TODO Auto-generated method stub
+			//
 			super.onPreExecute();
 			textView.setVisibility(View.VISIBLE);
 		}

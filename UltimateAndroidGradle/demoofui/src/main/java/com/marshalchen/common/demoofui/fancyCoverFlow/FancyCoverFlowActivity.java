@@ -34,7 +34,6 @@ public class FancyCoverFlowActivity extends ListActivity {
     // =============================================================================
 
     /**
-     * TODO: Scan the example package for activities and show them automatically.
      */
     private static class ExampleAdapter extends BaseAdapter {
 

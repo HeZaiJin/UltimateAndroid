@@ -23,7 +23,9 @@ import com.marshalchen.common.uimodule.slider.SliderLayout;
 
 import java.util.HashMap;
 
-
+/**
+ *  TODO banner
+ */
 public class SliderActivity extends ActionBarActivity implements BaseSliderView.OnSliderClickListener{
 
     private SliderLayout mDemoSlider;

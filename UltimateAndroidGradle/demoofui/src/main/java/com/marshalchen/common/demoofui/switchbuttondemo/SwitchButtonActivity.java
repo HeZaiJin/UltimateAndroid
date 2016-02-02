@@ -2,10 +2,7 @@ package com.marshalchen.common.demoofui.switchbuttondemo;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -13,6 +10,9 @@ import android.widget.ListView;
 
 import com.marshalchen.common.demoofui.R;
 
+/**
+ * TODO Learn Switch
+ */
 public class SwitchButtonActivity extends Activity implements OnItemClickListener {
 
 	private ListView mListView;

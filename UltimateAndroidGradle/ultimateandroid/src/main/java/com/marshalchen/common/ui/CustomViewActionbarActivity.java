@@ -15,7 +15,7 @@ import android.view.View;
 public abstract class CustomViewActionbarActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
+        //
         super.onCreate(savedInstanceState);
         ActionBar actionBar = getSupportActionBar();
         //使自定义的普通View能在title栏显示, actionBar.setCustomView能起作用.

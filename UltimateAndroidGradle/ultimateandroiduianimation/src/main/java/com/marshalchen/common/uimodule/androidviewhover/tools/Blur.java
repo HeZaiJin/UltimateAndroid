@@ -1,8 +1,10 @@
 package com.marshalchen.common.uimodule.androidviewhover.tools;
+import android.annotation.TargetApi;
 import android.graphics.Bitmap;
 import android.content.Context;
 
 
+import android.os.Build;
 import android.renderscript.Allocation;
 import android.renderscript.Element;
 import android.renderscript.RenderScript;
@@ -16,6 +18,7 @@ public class Blur {
         return apply(context, sentBitmap, DEFAULT_BLUR_RADIUS);
     }
 
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     public static Bitmap apply(Context context, Bitmap sentBitmap, int radius) {
         final Bitmap bitmap = sentBitmap.copy(sentBitmap.getConfig(), true);
         final RenderScript rs = RenderScript.create(context);

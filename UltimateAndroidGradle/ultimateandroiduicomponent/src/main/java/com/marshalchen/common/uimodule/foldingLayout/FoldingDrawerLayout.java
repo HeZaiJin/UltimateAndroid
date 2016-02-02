@@ -68,7 +68,7 @@ public class FoldingDrawerLayout extends DrawerLayout {
 
 			@Override
 			public void onDrawerStateChanged(int arg0) {
-				// TODO Auto-generated method stub
+				//
 
 			}
 
